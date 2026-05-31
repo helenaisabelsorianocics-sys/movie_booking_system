@@ -1,0 +1,229 @@
+
+:root {
+    --cinema-bg: #0b0d13;
+    --cinema-surface: #141824;
+    --cinema-gold: #ffb800;
+    --cinema-red: #e50914;
+    --text-light: #f8fafc;
+    --text-muted: #888e9b;
+}
+
+body {
+    background-color: var(--cinema-bg) !important;
+    color: var(--text-light) !important;
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.movie-poster-frame {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    border: 1px solid rgba(229, 9, 20, 0.3); /* Premium sub-glow accent */
+    width: 100%;
+    max-width: 180px; /* Locks standard poster widths */
+    height: 250px;
+}
+
+.movie-poster-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents stretching and forces clean box scaling */
+    display: block;
+}
+/* Navbar System */
+.navbar-premium {
+    background-color: var(--cinema-surface) !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.03);
+    padding: 1rem 2rem;
+}
+.navbar-brand-premium {
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--text-light) !important;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+.navbar-brand-premium span {
+    color: var(--cinema-gold);
+}
+.nav-link-premium {
+    color: var(--text-muted) !important;
+    font-weight: 600;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.nav-link-premium:hover, .nav-link-premium.active {
+    color: var(--cinema-gold) !important;
+}
+
+/* Location Sub-banner */
+.location-banner {
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 0.75rem 2rem;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* SM Cinema Date Selector Matrix */
+.date-selector-container {
+    background-color: var(--cinema-surface);
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    width: 100%;
+}
+.date-tab {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    padding: 1rem;
+    text-align: center;
+    flex: 1;
+    transition: all 0.2s ease;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+.date-tab:last-child {
+    border-right: none;
+}
+.date-tab.active {
+    background-color: var(--cinema-gold) !important;
+    color: #000000 !important;
+    font-weight: 700;
+}
+.date-tab:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--cinema-gold);
+}
+.date-tab .day-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    display: block;
+    opacity: 0.8;
+}
+.date-tab .date-number {
+    font-size: 1.35rem;
+    font-weight: 700;
+    display: block;
+    margin: 0.1rem 0;
+}
+
+/* Movie Segment Cards */
+.movie-list-row {
+    background-color: var(--cinema-surface);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+.movie-poster-frame {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.movie-poster-frame img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+.movie-title {
+    font-weight: 700;
+    color: var(--text-light);
+    font-size: 1.65rem;
+    margin-bottom: 0.5rem;
+}
+.badge-rating {
+    background-color: var(--cinema-red);
+    color: #ffffff;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+/* Interactive Showtime Buttons */
+.showtime-button {
+    background-color: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: var(--text-light) !important;
+    padding: 0.75rem 1.75rem;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+.showtime-button:hover {
+    border-color: var(--cinema-gold) !important;
+    color: #000000 !important;
+    background-color: var(--cinema-gold) !important;
+}
+.showtime-type {
+    font-size: 0.7rem;
+    display: block;
+    color: var(--text-muted);
+    font-weight: bold;
+    margin-top: 0.25rem;
+    text-transform: uppercase;
+}
+.showtime-button:hover .showtime-type {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* Footer Section */
+.footer-cinema {
+    background-color: #06080c;
+    border-top: 4px solid var(--cinema-gold);
+    color: var(--text-muted);
+    padding: 4rem 2rem;
+    margin-top: 6rem;
+}
+.footer-cinema h5 {
+    color: var(--text-light);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.footer-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.6rem;
+    transition: color 0.2s ease;
+}
+.footer-link:hover {
+    color: var(--cinema-gold);
+}
+
+.movie-list-row p,
+.movie-list-row .text-muted,
+.card p,
+.card .text-muted {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.text-white-50, 
+.text-muted {
+    color: #b3b3b3 !important;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+    opacity: 1 !important;
+}
+
+/* Support for older browser versions */
+.form-control::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+.form-control::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+.form-control:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
